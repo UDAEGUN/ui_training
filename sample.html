@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap Sample</title>
+    <!--BootstrapのCSS読み込み-->
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <!--スマホ・タブレットなどのマルチデバイス対応のための設定-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+<body>
+    <!--containerクラス containerの上下にサイズ3の余白を設定(py)-->
+    <div class="container py-3">
+
+        <!--1つめのrowクラス rowの下部にサイズ4の余白を設定(pb)-->
+        <div class="row pb-4">
+            <!--colクラス colをrowの中央に寄せている(mx-auto)-->
+            <div class="col-10 mx-auto">
+                <!--文章を中央寄せ(text-center) スマホ縦表示の場合のみ改行(<br>)を挟む-->
+                <h2 class="text-center">Bootstrap の<br class="d-sm-none" />ここがすごい！</h2>
+            </div>
+        </div>
+
+        <!--2つめのrowクラス-->
+        <div class="row">
+            <!--colクラス 画面がmd(タブレットサイズ)以上の大きさなら6、それ未満なら10グリッド分の列幅で表示-->
+            <div class="col-10 col-md-6 mx-auto">
+                <form id="prosAddForm" method="post">
+                    <fieldset id="pros_field">
+                        <!--入力項目はlabel要素とinput要素をグループ化する(form-group)-->
+                        <div class="form-group">
+                            <label for="title">タイトル</label><br/>
+                            <!--入力部品にBootstrapの部品デザインを適用する(form-control)-->
+                            <input class="form-control" id="title" type="text" maxlength="10" name="title" placeholder="タイトルを入力してください"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">説明</label><br/>
+                            <input class="form-control" id="description" type="text" maxlength="50" name="description" placeholder="説明を入力してください"/>
+                        </div>
+                        <div class="col text-center">
+                            <input type="button" value="おすすめポイントを追加" class="btn"/>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!--3つめのrowクラス-->
+        <div class="row pt-4">
+            <!--
+                画面がmd以上の大きさなら4グリッド分の列幅で表示 それ未満の場合は指定していないので初期値(12グリッド分)で表示
+                つまり、スマホで見ると1列が横幅いっぱいに広がって縦に3つ並び、それ以外だと3列が横に並ぶ
+            -->
+            <div class="col-md-4">
+                <!--
+                    カードの作成(card) カードの角が丸くならないよう指定(rounded-0)
+                    ヘッダー(カード上部のグレーの部分)とボディ(カード本体)を作っている
+                -->
+                <div class="card rounded-0">
+                    <div class="card-header text-center">
+                        <h5>豊富な部品</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>CSSを自分で1から書かなくても、用意された部品を組み合わせて手軽に画面デザインができる！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-0">
+                    <div class="card-header text-center">
+                        <h5>柔軟なレイアウト</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>画面レイアウト(どの部品を画面のどこに置くか)を細かく管理できるので、スマホ対応も簡単！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-0">
+                    <div class="card-header text-center">
+                        <h5>ユーザの多さ</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>使っている開発者が多く、ネットでサンプルや参考情報を集めやすいので勉強がしやすい！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--4つめのrowクラス-->
+        <div>
+            <div class="row pt-4">
+                <div class="col-10 mx-auto">
+                    <p class="text-center">もっと詳しい情報は<a href="https://getbootstrap.com/">公式サイト</a>から！</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

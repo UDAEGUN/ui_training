@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- ページタイトル -->
+    <title>Tech_Skills_Course Form Sample</title>
+</head>
+<body>
+    <h1>Tech_Skills_Course Form Sample</h1>
+
+    <!-- フォームの定義 (post: 送信方法の指定。情報がURLに付加されず、リクエストメッセージのボディに入力した情報を記載して送信)-->
+    <!-- ここでは遷移先を指定していないので、「送信」ボタン押下後はこの画面自身が再表示される -->
+    <form action="" method="post">
+        <div>
+            <!-- <label>タグ: for属性で対象フォームのid(ex."name")を指定することで、「項目名（ラベル）」と「フォーム部品」を関連付ける -->
+            <p><label for="name">姓名</label></p>
+            <!-- 姓名の入力フォーム定義  (autocomplete属性の "name" を設定することで、「姓名」の自動入力を有効にする)-->
+            <input type="text" name="name" id="name" autocomplete="off" />
+        </div>
+
+        <div>
+            <p><span>姓別</span></p>
+            <!-- ラジオボタンの定義 (同じname(ex."gender")を付けることで１つのグループとする) -->
+            <input type="radio" name="gender" id="man" value="1"><label for="man">男性</label>
+            <input type="radio" name="gender" id="women" value="2"><label for="women">女性</label>
+            <input type="radio" name="gender" id="x" value="3" checked><label for="x">X</label>
+        </div>
+
+        <div>
+            <p><label for="birthday">生年月日</label></p>
+            <!-- 日付の入力フォームの定義 (ブラウザによってUIが異なる) -->
+            <input type="date" name="birthday" id="birthday">
+        </div>
+
+        <div>
+            <p><label for="email">E-mail</label></p>
+            <!-- メールアドレスの入力フォーム定義 (「送信」されたときにメールアドレス形式(アットマークを間に含む)かがチェックされる。また、requiredを定義することで必須項目とする)-->
+            <input type="email" id="email" name="email" required placeholder="Emailを入力してください。">
+        </div>
+
+        <div>
+            <p><label for="password">Password</label></p>
+            <!-- パスワードの入力フォーム定義 (入力されたテキストは、ブラウザ上では「●」や「*」に置き換えられて表示されるが、暗号化送信されるわけではない)-->
+            <input type="password" id="password" name="password" placeholder="Passwordを入力してください。">
+        </div>
+
+        <div>
+            <p><label for="target">講義</label></p>
+            <!-- メニュー（セレクトボックス）の定義 -->
+            <select id ="target">
+                <!-- hidden属性を設定することで、初期値とはなるが選択後非表示となる -->
+                <option value="" hidden>講義を選択してください。</option>
+                <option value="1">UI基礎①</option>
+                <option value="2">UI基礎②</option>
+                <option value="3">UI基礎③</option>
+                <option value="4">UI基礎④</option>
+                <option value="5">その他</option>
+            </select>
+        </div>
+
+        <div>
+            <p><span>学習コンテンツ</span></p>
+            <!--  チェックボックスの定義 -->
+            <input type="checkbox" name="html" id="html" value="html"><label for="html">html</label>
+            <!--  checked属性は、選択された状態を指定する -->
+            <input type="checkbox" name="form" value="form" id="form" checked><label for="form">form</label>
+            <input type="checkbox" name="css" value="css" id="css"><label for="css">css</label>
+            <!--  disabled属性は、チェックボックスを使用不可にする -->
+            <input type="checkbox" name="bootstrap" value="bootstrap" id="bootstrap" disabled><label for="bootstrap">bootstrap</label>
+        </div>
+
+        <div>
+            <p><label for="inquiry">内容</label></p>
+            <!-- テキストエリアの定義 -->
+            <textarea id="inquiry" name="inquiry" placeholder="問い合わせ内容を入力してください。"></textarea>
+        </div>
+        <br/>
+
+        <div>
+            <!-- 送信ボタン -->
+            <input type="submit" class="btn" value="送信">
+        </div>
+        <br/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!-- 文書型(DocType) HTML 5の利用宣言  -->
+<!DOCTYPE html>
+
+<!-- <html>タグ：ページのすべての要素を囲む、最も外側の要素  -->
+<html>
+
+<!-- <head>タグ：「ページ内に直接は表示されないが、ページを構成する上で必要な要素」を格納するための置き場  -->
+<head>
+    <!-- <meta>タグ： charsetで、文字コードに UTF-8を使用 -->
+    <meta charset="utf-8" />
+    <!-- このページのタイトル -->
+    <title>Tech_Skills_Course HTML Sample</title>
+</head>
+
+<!-- <body>タグ: ページのメインコンテンツ置き場 -->
+<body>
+
+<!-- ページ最上部の見出し -->
+<h1>Tech_Skills_Course HTML Sample</h1>
+
+<!-- サイトのメインコンテンツエリア -->
+<!-- <h>タグ -->
+<h2>★見出し</h2>
+    <!-- 見出しを６段階の大きさで表現する。数値が大きくなるほど下位の見出し（小見出し）となる -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+<!-- <p>タグ -->
+<h2 id="p_tag">★段落を表現する</h2>
+    <!-- <p>タグで囲まれた部分が一つの段落であることを示し、1行分改行させる -->
+    <p>段落1</p>
+    <p>段落2</p>
+
+<!-- <br>タグ -->
+<h2>★改行を行う</h2>
+   <!-- brタグを入れることで次のテキストを改行させる -->
+   <p>テキストテキスト折り返し↓<br/>テキストテキストテキスト折り返し↓<br/>テキストテキストテキスト</p>
+
+<!-- <image>タグ -->
+<h2>★画像</h2>
+    <!-- 画像を表示させる。imagesフォルダにある画像を指定し、説明文書をaltに記載する -->
+    <p>画像有り</p>
+    <img src="images/sample_image1.png" alt="Sample image">
+    <p>画像無し</p>
+    <!-- 指定した画像がimagesフォルダに存在しないため、altに記載した説明文書が表示される -->
+    <img src="images/sample_image2.png" alt="Sample image2">
+
+<!-- <a href>タグ -->
+<h2>★リンク</h2>
+    <!-- リンク先ページとしてURL（絶対パス）を指定する -->
+    <p><a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A0%EF%BC%88HTML%EF%BC%89">UI基礎① (絶対パス)</a></p>
+    <!-- リンク先ページとしてURL（相対パス）を指定する -->
+    <p><a class ="link" href="images/sample_image1.png">サンプル画像1表示 (相対パス)</a></p>
+    <!-- ページ内要素(指定したid:p_tag)へ移動する -->
+    <p><a href="#p_tag">「★段落を表現する」へ移動</a></p>
+    <!-- このページのTOPへ移動する -->
+    <p><a href="#">ページトップへ</a></p>
+
+<!-- <table>タグ -->
+<h2>★表/テーブル</h2>
+    <!-- テーブルを定義し、枠線をborder属性で設定する -->
+    <table border="1">
+        <!-- 表のヘッダ部分としてグループ化 -->
+        <thead>
+            <tr>
+                <th>タグ</th>
+                <th>用途</th>
+                <th>備考</th>
+            </tr>
+        </thead>
+        <!-- 表の本体部分としてグループ化 -->
+        <tbody>
+            <tr>
+                <td>table</td>
+                <td>表の定義</td>
+                <td>tableタグで囲まれている部分が表となる</td>
+            </tr>
+            <tr>
+                <td>thead</td>
+                <td>表のヘッダを表す</td>
+                <td>表内に1つだけ配置可能</td>
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>表本体を表す</td>
+                <td>表内に必要な数だけ配置可能</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>表の行の定義</td>
+                <td>Table Row（行）</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>見出しセルの定義</td>
+                <td>Table Header（見出し）</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>表のデータセルの定義</td>
+                <td>Table Data（データ）</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- <div>タグ -->
+<h2>★ブロック要素</h2>
+    <!-- 「div単一」では意味をなさないが、囲んだ要素をひとつのブロックにまとめ、そのブロックの範囲にCSSを適用することが可能となる -->
+    <div>単一ブロック</div>
+    <!-- 入れ子での定義。レイアウトを作成する際はCSSと合わせて活用する -->
+    <div>
+        <div>入れ子ブロック</div>
+    </div>
+
+<!-- <span>タグ -->
+<h2>★インライン要素</h2>
+    <!-- 「span単一」では意味をなさないが、タグで囲った部分をインライン要素としてグループ化することで指定した範囲のみにCSSを適用することが可能となる-->
+    <div>
+        <p>テキスト<span>[インライン]</span>テキスト</p>
+    </div>
+
+<!-- <list>タグ -->
+<h2>★リスト</h2>
+    <!-- Unordered List(順序のないリスト)。リストの各項目はliタグで記述する。-->
+    <ul>
+        <li>HTML</li>
+        <li>Form</li>
+        <li>CSS</li>
+    </ul>
+    <!-- Ordered List(順序のあるリスト)。リストの各項目はliタグで記述する。-->
+    <ol>
+        <li>講義①HTML</li>
+        <li>講義②Form</li>
+        <li>講義③CSS</li>
+    </ol>
+</body>
+</html>

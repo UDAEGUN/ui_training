@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- CSS読み込み -->
+    <link href="./css/ui_sample.css" rel="stylesheet"/>
+    <!-- ページタイトル -->
+    <title>Tech_Skills_Course UI Sample</title>
+</head>
+<body>
+<!-- サイト上部headerエリア -->
+<div class="header">
+    <div class="header_title-logo">
+        <!-- ページタイトルの画像読み込み -->
+        <img src="./images/title_logo.png">
+    </div>
+</div>
+<!-- サイトのメインコンテンツエリア -->
+<div class="main">
+    <!-- メッセージ　CSSで枠線を描画し、一部カラーを変更。 -->
+    <h1 class="message">Webアプリケーション開発 <span>UI</span>について学びましょう。</h1>
+    <!-- コンテンツ一覧エリア -->
+    <div class="lecture-contents">
+        <!-- コンテンツ一覧のタイトル 下線をタイトル文字の下に引く -->
+        <h3 class="section-title">講義コンテンツ</h3>
+        <!-- 講義コンテンツ① -->
+        <div class="contents">
+            <!-- CSSでboxを描画しリンクを貼る -->
+            <div class="contents-box bg-blue">
+                <span class="contents-box_text">HTML</span>
+                <a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A0%EF%BC%88HTML%EF%BC%89"></a>
+            </div>
+            <p><a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A0%EF%BC%88HTML%EF%BC%89">UI基礎①</a></p>
+        </div>
+        <!-- 講義コンテンツ② -->
+        <div class="contents">
+            <!-- CSSでboxを描画しリンクを貼る -->
+            <div class="contents-box bg-yellow">
+                <span class="contents-box_text">FORM</span>
+                <a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A1%EF%BC%88Form%EF%BC%89"></a>
+            </div>
+            <p><a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A1%EF%BC%88Form%EF%BC%89">UI基礎②</a></p>
+        </div>
+        <!-- 講義コンテンツ③ -->
+        <div class="contents">
+            <!-- CSSでboxを描画しリンクを貼る -->
+            <div class="contents-box bg-green">
+                <span class="contents-box_text">CSS</span>
+                <a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A2%EF%BC%88CSS%EF%BC%89"></a>
+            </div>
+            <p><a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A2%EF%BC%88CSS%EF%BC%89">UI基礎③</a></p>
+        </div>
+        <!-- 講義コンテンツ④ -->
+        <div class="contents">
+            <!-- CSSでboxを描画しリンクを貼る -->
+            <div class="contents-box bg-pink">
+                <span class="contents-box_text">BS</span>
+                <a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A3%EF%BC%88BS%EF%BC%89"></a>
+            </div>
+            <p><a class ="link" href="http://52.156.33.87/redmine/projects/2021_tech_basics_course/wiki/UI%E5%9F%BA%E7%A4%8E%E2%91%A3%EF%BC%88BS%EF%BC%89">UI基礎④</a></p>
+        </div>
+    </div>
+    <!-- 問い合わせフォームエリア -->
+    <div class="inquiry">
+        <!-- 問い合わせフォームのタイトル 下線をタイトル文字の下に引く -->
+        <h3 class="section-title">問い合わせ</h3>
+        <!-- 入力フォームの定義 -->
+        <form action="" method="post">
+            <!-- メールアドレス 必須項目 -->
+            <p><label for="email">E-mail<span>(必須)</span></label><br/>
+                <input type="email" id="email" name="e-mail" required placeholder="Emailを入力してください。"></p>
+            <!-- 対象 必須項目 -->
+            <p><label>対象<span>(必須)</span></label><br>
+                <select id ="target" required>
+                    <option value="" hidden>対象を選択してください。</option>
+                    <option value="1">UI基礎①</option>
+                    <option value="2">UI基礎②</option>
+                    <option value="3">UI基礎③</option>
+                    <option value="4">UI基礎④</option>
+                    <option value="5">その他</option>
+                </select></p>
+            <!-- 問い合わせ内容 必須項目 -->
+            <p><label>内容<span>(必須)</span></label><br/>
+                <textarea id="inquiry" name="inquiry" required placeholder="問い合わせ内容を入力してください。"></textarea></p>
+            <!-- 送信ボタン -->
+            <p><input type="submit" class="btn" value="送信"></p><br/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* [ヘッダーエリア] */
+
+/* ヘッダー */
+.header {
+    background-color:#6699FF; /* 要素の背景色を指定する (#6699FF:明るい青) */
+    height:73px; /* 要素の高さ(縦幅)を指定する */
+ }
+
+/* ヘッダー タイトル画像 */
+ .header_title-logo {
+     float: left; /* 要素を左寄せする */
+     padding: 4px 10px; /* 要素の内側（上下 と 左右）の余白を指定する */
+ }
+
+
+/* [メインエリア] */
+
+/* メイン */
+ .main {
+     padding: 10px 80px; /* 要素の内側（上下 と 左右）の余白を指定する*/
+ }
+
+/* メイン ラベル */
+/* セレクタとセレクタを半角スペースで区切って記述することにより、特定の範囲内(.main)にある要素(label)のみにスタイルを適用させる */
+ .main label {
+     font-size:18px; /* 文字の大きさを指定する */
+     font-weight: 1000; /* 文字の太さを数値で指定する */
+ }
+
+/* メッセージ */
+.message {
+     font-size: 23px; /* 文字の大きさを指定する */
+     width: 900px; /* 要素の横幅を指定する */
+     border: solid; /* ボーダー(枠線)のスタイルを指定する (solid:一本線) */
+     border-color: #C0C0C0; /* ボーダー(枠線)のカラーを指定する */
+     padding: 5px 5px; /* 要素の内側（上下 と 左右）の余白を指定する */
+}
+
+/* メッセージ spanタグ */
+.message span {
+    color: #FF9872; /* 文字の色をカラーコード(16進数)で指定する  */
+}
+
+/* セクションタイトル */
+h3.section-title {
+    font-size: 20px; /* 文字の大きさを指定する  */
+    padding-top: 3px; /* 要素の内側（上）の余白を指定する */
+    text-decoration:underline; /* テキストに下線を設定する */
+    text-underline-position:auto; /*下線の位置をテキストの上に引く*/
+
+}
+
+
+/* [講義コンテンツエリア] */
+
+/* 講義コンテンツ枠 */
+.lecture-contents {
+    height:340px; /* 要素の高さ(縦幅)を指定する */
+    margin-top:10px; /* 要素の外側（上）の余白を指定する */
+    overflow:hidden; /* 要素のボックスからはみ出た部分の扱いを指定する (hidden: 収まらない部分を隠す) */
+}
+
+/* 講義コンテンツ */
+.contents {
+    float: left; /* 要素を左寄せする */
+    margin-right:55px; /* 要素の外側（右）の余白を指定する*/
+}
+
+/* 講義コンテンツの四角枠 */
+.contents-box {
+    display: flex; /* 要素を「Flexboxコンテナ」として定義する。 Flexboxは、レイアウト作成でよく使われる手法であり、ここでは四角枠内に文字を配置する用途で使用する */
+    justify-content: center; /* flexboxアイテムの主軸方向の揃え位置を指定する (center:中央に配置) */
+    align-items: center; /* flexboxアイテムの交差軸方向の揃え位置を指定する (center:中央に配置) */
+    width        : 185px; /* 要素の横幅を指定する */
+    height       : 185px; /* 要素の高さ(縦幅)を指定する */
+    border: 2px solid #2d424f; /* ボーダー(枠線)の太さ、スタイル、カラーを指定する */
+    position: relative  /* 元の位置から相対的に要素を配置する。 「.link」で四角枠の範囲全体をリンクにするために指定 */
+}
+
+/* 四角枠のカラー(青) */
+.bg-blue {
+    background-color: #39a9d6; /* 要素の背景色を指定する */
+}
+
+/* 四角枠のカラー(黄) */
+.bg-yellow {
+    background-color: #FFCC33; /* 要素の背景色を指定する */
+}
+
+/* 四角枠のカラー(緑) */
+.bg-green {
+    background-color: #33CC33; /* 要素の背景色を指定する */
+}
+
+/* 四角枠のカラー(ピンク) */
+.bg-pink {
+    background-color: #FF5192; /* 要素の背景色を指定する */
+}
+
+/* 四角枠下のテキスト */
+.contents-box_text {
+    font-size:23px; /* 文字の大きさを指定する  */
+    color: #FFFFFF; /* 文字の色をカラーコード(16進数)で指定する  */
+}
+
+/* 四角枠のリンク */
+.contents-box .link{
+    display: block; /* 要素の表示形式を指定する（ブロック） */
+    position: absolute; /* 親要素(.contents-box)を基準に位置を決めるabsoluteを使用するため、親要素にrelativeを設定している。 */
+    top: 0; /* 上からの配置位置（距離）を指定する */
+    left: 0; /* 左からの配置位置（距離）を指定する */
+    width: 100%; /* 要素の横幅を指定する */
+    height: 100%; /* 要素の高さ(縦幅)を指定する */
+}
+
+/* contents pタグ */
+.contents p {
+    text-align: center; /* ブロック要素の位置を指定する */
+}
+
+
+/* [問い合わせフォームエリア] */
+
+/* inquiry */
+.inquiry {
+    height: 300px; /* 要素の高さ(縦幅)を指定する */
+    margin-top:10px; /* 要素の外側（上下左右）の余白を指定する */
+}
+
+/* inquiry spanタグ */
+.inquiry span{
+    color: red; /* 文字の色をカラーキーワードで指定する  */
+    font-size: 18px; /* 文字の大きさを指定する  */
+    padding: 10px; /* 要素の内側（上下左右）の余白を指定する */
+}
+
+/* E-mail＆対象の入力フォーム */
+#email,#target {
+    width:500px; /* 要素の横幅を指定する */
+    height: 50px; /* 要素の高さ(縦幅)を指定する */
+    padding: 10px 15px; /* 要素の内側（上下 と 左右）の余白を指定する  */
+    font-size: 20px; /* 文字の大きさを指定する */
+    border-radius: 3px; /* ボックス角の丸み */
+    border: 1px solid #ddd; /* ボーダー(枠線)の太さ、スタイル、カラーを指定する */
+    box-sizing: border-box; /* 横幅の解釈をpadding, borderまでとする */
+}
+
+/* 問い合わせ内容のテキストエリア */
+#inquiry {
+    width: 950px; /* 要素の横幅を指定する */
+    height: 120px; /* 要素の高さ(縦幅)を指定する */
+    padding: 10px 15px; /* 要素の内側（上下 と 左右）の余白を指定する */
+    font-size: 20px; /* 文字の大きさを指定する */
+    border-radius: 3px; /* 要素の境界の外側の角を丸める */
+    border: 1px solid #ddd; /* ボーダー(枠線)の太さ、スタイル、カラーを指定する */
+    box-sizing: border-box; /* 横幅の解釈をpadding, borderまでとする */
+}
+
+/* 送信ボタン */
+.btn{
+  display: inline-block;  /* 要素の表示形式を指定する（インラインブロック：横幅と高さを指定可能） */
+  border-radius: 5px; /* 要素の境界の外側の角を丸める */
+  background-color: #DD0000; /* 要素の背景色を指定する */
+  padding: 10px 10px; /* 要素の内側（上下 と 左右）の余白を指定する */
+  text-align: center; /* ブロック要素の位置を指定する */
+  color: #FFFFFF; /* 文字の色をカラーコード(16進数)で指定する */
+  width: 100px; /* 要素の横幅を指定する */
+}
+
+
